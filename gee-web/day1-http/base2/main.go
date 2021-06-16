@@ -23,6 +23,7 @@ func (engine *Engine) ServeHTTP(w http.ResponseWriter, req *http.Request) {
 }
 
 func main()  {
+	//intercept all requests
 	engine := new(Engine)
 	log.Fatal(http.ListenAndServe(":9999", engine))
 }
